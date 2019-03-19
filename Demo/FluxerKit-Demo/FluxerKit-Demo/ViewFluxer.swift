@@ -24,7 +24,7 @@ final class ViewFluxer: Fluxer {
         var value = BehaviorSubject<Int>(value: 0)
     }
 
-    var store: Store
+    let store: Store
 
     init() {
         self.store = Store()

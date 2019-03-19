@@ -8,10 +8,11 @@
 
 import RxSwift
 import RxCocoa
+import UIKit
 
 public protocol FluxerStoryboardBindable: FluxerBindable {}
 
-extension FluxerStoryboardBindable where Self: UIViewController {
+extension FluxerStoryboardBindable {
     public var fluxer: Fluxer? {
         get { return self.associatedObject(forKey: &fluxerKey) }
         set {
@@ -30,18 +31,24 @@ extension FluxerStoryboardBindable where Self: UIViewController {
     private func performBinding() {
         guard let fluxer = self.fluxer else { return }
         guard !self.isReactorBinded else { return }
-        guard self.isViewLoaded else { return }
+        guard !self.shouldDeferBinding() else { return }
 
         self.bind(fluxer: fluxer)
         self.isReactorBinded = true
     }
 
     private func invokedViewDidLoad() {
-        rx.viewDidLoadInvoked
+        guard let vc = self as? UIViewController else { return }
+
+        vc.rx.viewDidLoadInvoked
             .subscribe(onNext: { [weak self] _ in
                 self?.performBinding()
             })
             .disposed(by: disposeBag)
+    }
+
+    private func shouldDeferBinding() -> Bool {
+        return (self as? UIViewController)?.isViewLoaded == false
     }
 }
 
