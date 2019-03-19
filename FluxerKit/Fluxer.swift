@@ -16,7 +16,7 @@ public protocol Fluxer: class, AssociatedObjectStore {
     var store: Store { get }
 
     func dispatch(action: Action) throws -> Observable<Dispatcher>
-    func updateStore(dispatcher: Dispatcher)
+    func updateStore(dispatcher: Dispatcher) throws
 }
 
 private var actionKey = "action"
@@ -49,11 +49,11 @@ extension Fluxer {
         return self._action
     }
 
-    func dispatch(action: Action) throws -> Observable<Dispatcher> {
+    public func dispatch(action: Action) throws -> Observable<Dispatcher> {
         return .empty()
     }
 
-    func updateStore(dispatcher: Dispatcher) {
+    public func updateStore(dispatcher: Dispatcher) throws {
 
     }
 
@@ -72,7 +72,12 @@ extension Fluxer {
                 }
             }
             .do(onNext: { [weak self] dispatcher in
-                self?.updateStore(dispatcher: dispatcher)
+                guard let self = self else { return }
+                do {
+                    try self.updateStore(dispatcher: dispatcher)
+                } catch {
+                    return
+                }
             })
             .replay(1)
         stream.connect().disposed(by: disposeBag)

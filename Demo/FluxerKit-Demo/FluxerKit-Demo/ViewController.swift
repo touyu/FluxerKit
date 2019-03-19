@@ -7,14 +7,39 @@
 //
 
 import UIKit
+import RxSwift
+import FluxerKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController, FluxerStoryboardBindable {
+    typealias Fluxer = ViewFluxer
+
+    var disposeBag = DisposeBag()
+
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var minusButton: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+
     }
 
+    func bind(fluxer: ViewFluxer) {
+        minusButton.rx.tap
+            .map { Fluxer.Action.decrease }
+            .bind(to: fluxer.action)
+            .disposed(by: disposeBag)
 
+        plusButton.rx.tap
+            .map { Fluxer.Action.increase }
+            .bind(to: fluxer.action)
+            .disposed(by: disposeBag)
+
+        fluxer.store.value
+            .map { $0.description }
+            .bind(to: countLabel.rx.text)
+            .disposed(by: disposeBag)
+    }
 }
 

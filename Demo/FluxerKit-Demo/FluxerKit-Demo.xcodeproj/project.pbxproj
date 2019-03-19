@@ -12,6 +12,11 @@
 		D11AAD3A22409CD800537CB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11AAD3822409CD800537CB0 /* Main.storyboard */; };
 		D11AAD3C22409CDA00537CB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D11AAD3B22409CDA00537CB0 /* Assets.xcassets */; };
 		D11AAD3F22409CDA00537CB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11AAD3D22409CDA00537CB0 /* LaunchScreen.storyboard */; };
+		D11AAD5F2240C28600537CB0 /* ViewFluxer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11AAD5E2240C28600537CB0 /* ViewFluxer.swift */; };
+		D11AAD612240C49B00537CB0 /* FluxerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11AAD4B22409CEC00537CB0 /* FluxerKit.framework */; };
+		D11AAD622240C49B00537CB0 /* FluxerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D11AAD4B22409CEC00537CB0 /* FluxerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D11AAD802240C82E00537CB0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11AAD7D2240C81E00537CB0 /* RxCocoa.framework */; };
+		D11AAD812240C82E00537CB0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11AAD7E2240C81E00537CB0 /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +27,28 @@
 			remoteGlobalIDString = D11AAD1D22409C4500537CB0;
 			remoteInfo = FluxerKit;
 		};
+		D11AAD632240C49B00537CB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D11AAD4622409CEC00537CB0 /* FluxerKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D11AAD1C22409C4500537CB0;
+			remoteInfo = FluxerKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D11AAD652240C49B00537CB0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D11AAD622240C49B00537CB0 /* FluxerKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D11AAD3122409CD800537CB0 /* FluxerKit-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FluxerKit-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +59,27 @@
 		D11AAD3E22409CDA00537CB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D11AAD4022409CDA00537CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D11AAD4622409CEC00537CB0 /* FluxerKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FluxerKit.xcodeproj; path = ../../FluxerKit.xcodeproj; sourceTree = "<group>"; };
+		D11AAD5E2240C28600537CB0 /* ViewFluxer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFluxer.swift; sourceTree = "<group>"; };
+		D11AAD672240C4CC00537CB0 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		D11AAD682240C4CC00537CB0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		D11AAD6E2240C81E00537CB0 /* E70CC143-9335-3268-8FEB-95F650861129.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "E70CC143-9335-3268-8FEB-95F650861129.bcsymbolmap"; sourceTree = "<group>"; };
+		D11AAD6F2240C81E00537CB0 /* RxBlocking.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxBlocking.framework.dSYM; sourceTree = "<group>"; };
+		D11AAD702240C81E00537CB0 /* D432825E-D91E-344A-AF04-8E71BB71B358.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "D432825E-D91E-344A-AF04-8E71BB71B358.bcsymbolmap"; sourceTree = "<group>"; };
+		D11AAD712240C81E00537CB0 /* E0774270-5CE2-3B0F-B936-D3A0AA635EF4.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "E0774270-5CE2-3B0F-B936-D3A0AA635EF4.bcsymbolmap"; sourceTree = "<group>"; };
+		D11AAD722240C81E00537CB0 /* RxAtomic.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxAtomic.framework.dSYM; sourceTree = "<group>"; };
+		D11AAD732240C81E00537CB0 /* 754B81A5-6E78-34D1-9539-1F7FEB1ED414.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "754B81A5-6E78-34D1-9539-1F7FEB1ED414.bcsymbolmap"; sourceTree = "<group>"; };
+		D11AAD742240C81E00537CB0 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxTest.framework; sourceTree = "<group>"; };
+		D11AAD752240C81E00537CB0 /* DEE2A110-DC78-3F88-8F29-54BB9147FE8B.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "DEE2A110-DC78-3F88-8F29-54BB9147FE8B.bcsymbolmap"; sourceTree = "<group>"; };
+		D11AAD762240C81E00537CB0 /* B157999F-7A27-32F8-BCB6-8ED5A9A13A8C.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "B157999F-7A27-32F8-BCB6-8ED5A9A13A8C.bcsymbolmap"; sourceTree = "<group>"; };
+		D11AAD772240C81E00537CB0 /* RxCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxCocoa.framework.dSYM; sourceTree = "<group>"; };
+		D11AAD782240C81E00537CB0 /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxSwift.framework.dSYM; sourceTree = "<group>"; };
+		D11AAD792240C81E00537CB0 /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxAtomic.framework; sourceTree = "<group>"; };
+		D11AAD7A2240C81E00537CB0 /* A2C0D0C8-772D-3966-AAA5-795BD7CE1EC4.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "A2C0D0C8-772D-3966-AAA5-795BD7CE1EC4.bcsymbolmap"; sourceTree = "<group>"; };
+		D11AAD7B2240C81E00537CB0 /* RxTest.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxTest.framework.dSYM; sourceTree = "<group>"; };
+		D11AAD7C2240C81E00537CB0 /* D780457F-DFD1-3FAF-9901-8C818FA716F1.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "D780457F-DFD1-3FAF-9901-8C818FA716F1.bcsymbolmap"; sourceTree = "<group>"; };
+		D11AAD7D2240C81E00537CB0 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
+		D11AAD7E2240C81E00537CB0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
+		D11AAD7F2240C81E00537CB0 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxBlocking.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +87,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11AAD802240C82E00537CB0 /* RxCocoa.framework in Frameworks */,
+				D11AAD812240C82E00537CB0 /* RxSwift.framework in Frameworks */,
+				D11AAD612240C49B00537CB0 /* FluxerKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +102,7 @@
 				D11AAD4622409CEC00537CB0 /* FluxerKit.xcodeproj */,
 				D11AAD3322409CD800537CB0 /* FluxerKit-Demo */,
 				D11AAD3222409CD800537CB0 /* Products */,
+				D11AAD662240C4CC00537CB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +119,7 @@
 			children = (
 				D11AAD3422409CD800537CB0 /* AppDelegate.swift */,
 				D11AAD3622409CD800537CB0 /* ViewController.swift */,
+				D11AAD5E2240C28600537CB0 /* ViewFluxer.swift */,
 				D11AAD3822409CD800537CB0 /* Main.storyboard */,
 				D11AAD3B22409CDA00537CB0 /* Assets.xcassets */,
 				D11AAD3D22409CDA00537CB0 /* LaunchScreen.storyboard */,
@@ -84,6 +136,42 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D11AAD662240C4CC00537CB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D11AAD6D2240C81E00537CB0 /* iOS */,
+				D11AAD672240C4CC00537CB0 /* RxCocoa.framework */,
+				D11AAD682240C4CC00537CB0 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D11AAD6D2240C81E00537CB0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D11AAD6E2240C81E00537CB0 /* E70CC143-9335-3268-8FEB-95F650861129.bcsymbolmap */,
+				D11AAD6F2240C81E00537CB0 /* RxBlocking.framework.dSYM */,
+				D11AAD702240C81E00537CB0 /* D432825E-D91E-344A-AF04-8E71BB71B358.bcsymbolmap */,
+				D11AAD712240C81E00537CB0 /* E0774270-5CE2-3B0F-B936-D3A0AA635EF4.bcsymbolmap */,
+				D11AAD722240C81E00537CB0 /* RxAtomic.framework.dSYM */,
+				D11AAD732240C81E00537CB0 /* 754B81A5-6E78-34D1-9539-1F7FEB1ED414.bcsymbolmap */,
+				D11AAD742240C81E00537CB0 /* RxTest.framework */,
+				D11AAD752240C81E00537CB0 /* DEE2A110-DC78-3F88-8F29-54BB9147FE8B.bcsymbolmap */,
+				D11AAD762240C81E00537CB0 /* B157999F-7A27-32F8-BCB6-8ED5A9A13A8C.bcsymbolmap */,
+				D11AAD772240C81E00537CB0 /* RxCocoa.framework.dSYM */,
+				D11AAD782240C81E00537CB0 /* RxSwift.framework.dSYM */,
+				D11AAD792240C81E00537CB0 /* RxAtomic.framework */,
+				D11AAD7A2240C81E00537CB0 /* A2C0D0C8-772D-3966-AAA5-795BD7CE1EC4.bcsymbolmap */,
+				D11AAD7B2240C81E00537CB0 /* RxTest.framework.dSYM */,
+				D11AAD7C2240C81E00537CB0 /* D780457F-DFD1-3FAF-9901-8C818FA716F1.bcsymbolmap */,
+				D11AAD7D2240C81E00537CB0 /* RxCocoa.framework */,
+				D11AAD7E2240C81E00537CB0 /* RxSwift.framework */,
+				D11AAD7F2240C81E00537CB0 /* RxBlocking.framework */,
+			);
+			name = iOS;
+			path = Carthage/Build/iOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,10 +182,13 @@
 				D11AAD2D22409CD800537CB0 /* Sources */,
 				D11AAD2E22409CD800537CB0 /* Frameworks */,
 				D11AAD2F22409CD800537CB0 /* Resources */,
+				D11AAD652240C49B00537CB0 /* Embed Frameworks */,
+				D11AAD6C2240C4EB00537CB0 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D11AAD642240C49B00537CB0 /* PBXTargetDependency */,
 			);
 			name = "FluxerKit-Demo";
 			productName = "FluxerKit-Demo";
@@ -166,17 +257,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D11AAD6C2240C4EB00537CB0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D11AAD2D22409CD800537CB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11AAD5F2240C28600537CB0 /* ViewFluxer.swift in Sources */,
 				D11AAD3722409CD800537CB0 /* ViewController.swift in Sources */,
 				D11AAD3522409CD800537CB0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D11AAD642240C49B00537CB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FluxerKit;
+			targetProxy = D11AAD632240C49B00537CB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D11AAD3822409CD800537CB0 /* Main.storyboard */ = {
@@ -317,9 +439,14 @@
 		D11AAD4422409CDA00537CB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V8AZ23YEL4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "FluxerKit-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -335,9 +462,14 @@
 		D11AAD4522409CDA00537CB0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V8AZ23YEL4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "FluxerKit-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
