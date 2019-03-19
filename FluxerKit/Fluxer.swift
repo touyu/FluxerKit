@@ -15,8 +15,11 @@ public protocol Fluxer: class, AssociatedObjectStore {
 
     var store: Store { get }
 
+    func transform(action: Observable<Action>) -> Observable<Action>
     func dispatch(action: Action) throws -> Observable<Dispatcher>
+    func transform(dispatcher: Observable<Dispatcher>) -> Observable<Dispatcher>
     func updateStore(dispatcher: Dispatcher) throws
+    func transform(store: Store)
 }
 
 private var actionKey = "action"
@@ -49,11 +52,23 @@ extension Fluxer {
         return self._action
     }
 
+    public func transform(action: Observable<Action>) -> Observable<Action> {
+        return action
+    }
+
     public func dispatch(action: Action) throws -> Observable<Dispatcher> {
         return .empty()
     }
 
+    public func transform(dispatcher: Observable<Dispatcher>) -> Observable<Dispatcher> {
+        return dispatcher
+    }
+
     public func updateStore(dispatcher: Dispatcher) throws {
+
+    }
+
+    public func transform(store: Store) {
 
     }
 
@@ -62,7 +77,8 @@ extension Fluxer {
             _alreadyRegistered = true
         }
 
-        let stream = _action
+        let transformedAction = transform(action: _action.asObservable())
+        let dispatcher = transformedAction
             .flatMap { [weak self] action -> Observable<Dispatcher> in
                 guard let self = self else { return .empty() }
                 do {
@@ -71,15 +87,18 @@ extension Fluxer {
                     return .empty()
                 }
             }
+        let transformedDispatcher = transform(dispatcher: dispatcher)
+        let stream = transformedDispatcher
             .do(onNext: { [weak self] dispatcher in
                 guard let self = self else { return }
                 do {
                     try self.updateStore(dispatcher: dispatcher)
+                    self.transform(store: self.store)
                 } catch {
                     return
                 }
-            })
-            .replay(1)
+            }).replay(1)
+
         stream.connect().disposed(by: disposeBag)
     }
 }
