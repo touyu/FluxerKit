@@ -1,4 +1,4 @@
-# FluxerKit
+# FluxerKit (Beta)
 
 ![Swift 4.2.1](https://img.shields.io/badge/Swift-4.2.1-orange.svg)
 <img src="https://img.shields.io/badge/platforms-iOS-lightgrey.svg">
