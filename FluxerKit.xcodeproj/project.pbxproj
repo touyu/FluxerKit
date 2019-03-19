@@ -50,7 +50,7 @@
 		D11AAD1322409C4500537CB0 = {
 			isa = PBXGroup;
 			children = (
-				D11AAD1F22409C4500537CB0 /* FluxerKit */,
+				D11AAD822240ECA200537CB0 /* Sources */,
 				D11AAD1E22409C4500537CB0 /* Products */,
 				D11AAD4E22409F0200537CB0 /* Frameworks */,
 			);
@@ -62,16 +62,6 @@
 				D11AAD1D22409C4500537CB0 /* FluxerKit.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D11AAD1F22409C4500537CB0 /* FluxerKit */ = {
-			isa = PBXGroup;
-			children = (
-				D11AAD822240ECA200537CB0 /* Sources */,
-				D11AAD2022409C4500537CB0 /* FluxerKit.h */,
-				D11AAD2122409C4500537CB0 /* Info.plist */,
-			);
-			path = FluxerKit;
 			sourceTree = "<group>";
 		};
 		D11AAD4E22409F0200537CB0 /* Frameworks */ = {
@@ -93,6 +83,8 @@
 				D11AAD5C22409FF800537CB0 /* FluxerStoryboardBindable.swift */,
 				D11AAD5822409FA100537CB0 /* RecursiveLock.swift */,
 				D11AAD832240ECBC00537CB0 /* UIViewController+Extension.swift */,
+				D11AAD2022409C4500537CB0 /* FluxerKit.h */,
+				D11AAD2122409C4500537CB0 /* Info.plist */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -350,7 +342,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = FluxerKit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -381,7 +373,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = FluxerKit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
