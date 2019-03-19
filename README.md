@@ -31,6 +31,8 @@ FluxerKit solve these.
 ## Installation
 
 ### Carthage
+FluxerKit officially supports Carthage.
+ 
 Add the following line to Cartfile:
 ```
 github "touyu/FluxerKit"
