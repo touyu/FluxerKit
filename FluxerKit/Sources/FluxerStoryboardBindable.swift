@@ -7,7 +7,6 @@
 //
 
 import RxSwift
-import RxCocoa
 import UIKit
 
 public protocol FluxerStoryboardBindable: FluxerBindable {}
@@ -51,18 +50,3 @@ extension FluxerStoryboardBindable {
         return (self as? UIViewController)?.isViewLoaded == false
     }
 }
-
-extension Reactive where Base: UIViewController {
-    var viewDidLoad: Observable<Void> {
-        return sentMessage(#selector(base.viewDidLoad))
-            .map { _ in () }
-            .share(replay: 1)
-    }
-
-    var viewDidLoadInvoked: Observable<Void> {
-        return methodInvoked(#selector(base.viewDidLoad))
-            .map { _ in () }
-            .share(replay: 1)
-    }
-}
-

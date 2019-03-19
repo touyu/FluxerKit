@@ -16,6 +16,7 @@
 		D11AAD5922409FA100537CB0 /* RecursiveLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11AAD5822409FA100537CB0 /* RecursiveLock.swift */; };
 		D11AAD5B22409FB600537CB0 /* FluxerBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11AAD5A22409FB600537CB0 /* FluxerBindable.swift */; };
 		D11AAD5D22409FF800537CB0 /* FluxerStoryboardBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11AAD5C22409FF800537CB0 /* FluxerStoryboardBindable.swift */; };
+		D11AAD842240ECBC00537CB0 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11AAD832240ECBC00537CB0 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D11AAD5822409FA100537CB0 /* RecursiveLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveLock.swift; sourceTree = "<group>"; };
 		D11AAD5A22409FB600537CB0 /* FluxerBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxerBindable.swift; sourceTree = "<group>"; };
 		D11AAD5C22409FF800537CB0 /* FluxerStoryboardBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxerStoryboardBindable.swift; sourceTree = "<group>"; };
+		D11AAD832240ECBC00537CB0 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,14 +67,9 @@
 		D11AAD1F22409C4500537CB0 /* FluxerKit */ = {
 			isa = PBXGroup;
 			children = (
+				D11AAD822240ECA200537CB0 /* Sources */,
 				D11AAD2022409C4500537CB0 /* FluxerKit.h */,
 				D11AAD2122409C4500537CB0 /* Info.plist */,
-				D11AAD4C22409D0100537CB0 /* Fluxer.swift */,
-				D11AAD5422409F7100537CB0 /* AssociatedObjectStore.swift */,
-				D11AAD5622409F8900537CB0 /* ActionSubject.swift */,
-				D11AAD5822409FA100537CB0 /* RecursiveLock.swift */,
-				D11AAD5A22409FB600537CB0 /* FluxerBindable.swift */,
-				D11AAD5C22409FF800537CB0 /* FluxerStoryboardBindable.swift */,
 			);
 			path = FluxerKit;
 			sourceTree = "<group>";
@@ -84,6 +81,20 @@
 				D11AAD5022409F0200537CB0 /* RxSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D11AAD822240ECA200537CB0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D11AAD5622409F8900537CB0 /* ActionSubject.swift */,
+				D11AAD5422409F7100537CB0 /* AssociatedObjectStore.swift */,
+				D11AAD4C22409D0100537CB0 /* Fluxer.swift */,
+				D11AAD5A22409FB600537CB0 /* FluxerBindable.swift */,
+				D11AAD5C22409FF800537CB0 /* FluxerStoryboardBindable.swift */,
+				D11AAD5822409FA100537CB0 /* RecursiveLock.swift */,
+				D11AAD832240ECBC00537CB0 /* UIViewController+Extension.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +204,7 @@
 				D11AAD5D22409FF800537CB0 /* FluxerStoryboardBindable.swift in Sources */,
 				D11AAD5722409F8900537CB0 /* ActionSubject.swift in Sources */,
 				D11AAD4D22409D0100537CB0 /* Fluxer.swift in Sources */,
+				D11AAD842240ECBC00537CB0 /* UIViewController+Extension.swift in Sources */,
 				D11AAD5B22409FB600537CB0 /* FluxerBindable.swift in Sources */,
 				D11AAD5922409FA100537CB0 /* RecursiveLock.swift in Sources */,
 			);
