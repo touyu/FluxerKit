@@ -21,7 +21,7 @@ final class ViewFluxer: Fluxer {
     }
 
     struct Store {
-        var value = BehaviorSubject<Int>(value: 0)
+        let value = BehaviorSubject<Int>(value: 0)
     }
 
     let store: Store
