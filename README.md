@@ -13,3 +13,19 @@ However, There are parts of ReactorKit that I don't like.
 4. No official carthage support
 
 FluxerKit solve these.
+
+## Dependencies
+- RxSwift >= 4.0
+- RxCocoa >= 4.0
+
+## Requirements
+- Swift 4
+- iOS 8
+
+## Installation
+
+### Carthage
+Add the following line to Cartfile:
+```
+github "touyu/FluxerKit"
+```
